@@ -1,0 +1,74 @@
+<style>
+    body {
+        margin: 0;
+        background-color: black
+    }
+
+    .score-container {
+        position: fixed;
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        color: white;
+        font-size: .8em;
+        user-select: none;
+    }
+
+    .game-over {
+        position: fixed;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .game-over-cont {
+        background-color: white;
+        width: 35%;
+        padding: 2em;
+        text-align: center;
+    }
+
+    .points {
+        margin: 0;
+        font-weight: bold;
+        font-size: 2em;
+        line-height: 1;
+    }
+
+    .pt-txt {
+        color: gray;
+        opacity: 700;
+    }
+
+    .start-btn {
+        background-color: blue;
+        cursor: pointer;
+        color: white;
+        border: 0;
+        padding: .5em 3em;
+        width: 100%;
+        outline: none;
+        border-radius: 16px;
+    }
+</style>
+<div class="score-container">
+    <span>Score: </span>
+    <span id="scoreEl">0</span>
+</div>
+<div class="game-over" id="modelEl">
+    <div class="game-over-cont">
+        <h1 class="points" id="totalPoints">0</h1>
+        <p class="pt-txt">Points</p>
+        <div>
+            <button class="start-btn" id="startGameBtn">Start Game</button>
+        </div>
+    </div>
+</div>
+<canvas></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"></script>
+<script src="./index.js"></script>
